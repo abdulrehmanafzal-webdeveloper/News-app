@@ -6,6 +6,8 @@
   height: 40vmin;
   pointer-events: none;
 }
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'tailwindcss/tailwind.css';
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
