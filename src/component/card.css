@@ -1,0 +1,77 @@
+#card-attraction:hover{
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+.custom-carousel .carousel-control-prev svg {
+  width: 22px;
+  height: 50px;
+  color: black; /* Arrow color */
+  background-color: #dadce0;
+  margin-right: 60px;
+  pointer-events: auto;
+}
+/* Rotate the arrow to point right */
+.custom-carousel .carousel-control-next svg {
+  width: 22px;
+  height: 50px;
+  color: black; /* Arrow color */
+  background-color: #dadce0;
+  transform: rotate(180deg);
+  margin-left: 60px;
+  pointer-events: auto;
+}
+/* Disable the smooth transition on the Carousel */
+.custom-carousel .carousel-item {
+  transition: none !important; /* This disables the default transition effect */
+}
+.custom-carousel .carousel-control-next,
+.carousel-control-prev{
+  pointer-events: none;
+}
+
+.custom-carousel .carousel-indicators {
+  width: 200px;
+  margin-bottom: 0.5rem;
+  margin-top: 90px;
+  left: 90px;
+  background-color: black;
+  border-radius: 9px;
+  padding: 0 6px;
+}
+
+.custom-carousel .carousel-indicators [data-bs-target] {
+  width: 80px; /* Width of the indicator */
+  height: 5px; /* Height of the indicator */
+  border-radius: 50%; /* Makes the indicator circular */
+}
+
+.custom-carousel .carousel-indicators .active {
+  width: 300px; /* Enlarged width for active dot */
+  height: 5px; /* Height remains same for consistency */
+  background-color: white; /* Active indicator color */
+}
+
+
+/* Allitems */
+.Categoy{
+  display: flex;
+  justify-content: space-around;
+  padding: 4px;
+  color: white;
+}
+.Categoy a {
+  text-decoration: none; /* Removes underline */
+  color: black; /* Keeps text color the same as the surrounding text */
+}
+.Categoy a:hover {
+  color: rgb(148, 145, 145); /* Keeps text color the same as the surrounding text */
+}
+
+
+
+
+
+
+
+

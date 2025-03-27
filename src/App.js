@@ -1,11 +1,9 @@
-
-import './App.css';
-import Weather from './component/Weather';
-
+import "./App.css";
+import Navbar from "./component/Navbar";
 function App() {
   return (
     <div>
-      <Weather/>
+      <Navbar />
     </div>
   );
 }

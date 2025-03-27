@@ -1,0 +1,199 @@
+/* Story and Cricket */
+.story p {
+  display: -webkit-box; /* Required for the line clamping to work */
+  -webkit-line-clamp: 2; /* Number of lines to display */
+  -webkit-box-orient: vertical; /* Defines the box orientation as vertical */
+  overflow: hidden; /* Ensures the text beyond 2 lines is hidden */
+  text-overflow: ellipsis; /* Adds ellipsis for truncated text */
+  width: 220px; /* Set the width of the container */
+  height: 73px; /* Optional: Adjust based on design */
+  border: 2px solid #f9f9f9;
+  color: black;
+  margin: 7px;
+  border-radius: 7px;
+  background-color: #efebeb;
+  text-decoration: underline;
+  padding: 5px; /* Optional: Adds inner spacing */
+  line-height: 1.9;
+}
+.story p:hover {
+  cursor: pointer;
+  background-color: #d2cfcf;
+}
+.story {
+  height: 300px;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.custom-carousel2 .carousel-control-prev svg {
+  width: 15px;
+  height: 50px;
+  color: black; /* Arrow color */
+  background-color: #dadce0;
+  margin-right: 22px;
+  pointer-events: auto;
+}
+/* Rotate the arrow to point right */
+.custom-carousel2 .carousel-control-next svg {
+  width: 15px;
+  height: 50px;
+  color: black; /* Arrow color */
+  background-color: #dadce0;
+  transform: rotate(180deg);
+  margin-left: 22px;
+  pointer-events: auto;
+}
+.custom-carousel2 .carousel-indicators {
+  width: 120px;
+  margin-bottom: 0rem;
+  margin-top: 90px;
+  left: 35px;
+}
+/* unactive dot color */
+.custom-carousel2 .carousel-indicators [data-bs-target] {
+  background-color: black;
+  width: 80px; /* Width of the indicator */
+  height: 5px; /* Height of the indicator */
+  border-radius: 50%; /* Makes the indicator circular */
+}
+
+.custom-carousel2 .carousel-indicators .active {
+  width: 200px; /* Enlarged width for active dot */
+  height: 5px; /* Height remains same for consistency */
+  background-color: black; /* Active indicator color */
+}
+/* Disable the smooth transition on the Carousel */
+.custom-carousel2 .carousel-item {
+  transition: none !important; /* This disables the default transition effect */
+}
+.custom-carousel2 .carousel-control-next,
+.carousel-control-prev {
+  pointer-events: none;
+}
+
+/* Spinner */
+.loading-dots-container {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  width: 100%; /* Ensure the container spans the width of its parent */
+  height: 100px; /* Optional, adjust to control vertical space */
+}
+
+.loading-dots {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  background-color: #333; /* Customize the color as needed */
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: -0.32s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Cricket */
+.match-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 300px;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 1; /* Default stacking order */
+  transition: z-index 0.3s ease;
+}
+
+.match-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 220px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efebeb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 8px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.team-img {
+  width: 40px; /* Set width to 40px */
+  height: 40px; /* Set height to 40px */
+  object-fit: cover; /* Make sure the image covers the area, maintaining aspect ratio */
+  border-radius: 50%; /* Round the image to make it circular */
+  max-width: 40px; /* Ensure it doesn’t exceed 40px in width */
+  max-height: 40px; /* Ensure it doesn’t exceed 40px in height */
+  display: block; /* Ensure no extra space below the image (useful for inline-block images) */
+}
+
+.vs {
+  /* font-size: 18px; */
+  /* font-weight: bold; */
+  /* margin: 10px 0; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  max-width: 90px;
+  /* align-items: center; */
+}
+
+.date-time {
+  color: #666;
+}
+.match-card:hover {
+  cursor: pointer;
+  background-color: #d2cfcf;
+}
+
+/* News 2 */
+.image:hover {
+  background-color: #f3efef;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); /* h-offset, v-offset, blur, color */
+}
+
+.truncate-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
