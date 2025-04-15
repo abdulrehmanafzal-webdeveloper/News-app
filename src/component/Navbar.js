@@ -34,7 +34,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <Router basename="/my-app">
+    <Router basename={process.env.NODE_ENV === "production" ? "/my-app" : "/"}>
       <Routes>
         <Route
           path="/"
