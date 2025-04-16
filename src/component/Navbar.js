@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import newimage1 from "./newimage1.jpg";
 import newimage2 from "./newimage2.jpg";
 import newimage3 from "./newimage3.jpg";
@@ -34,7 +34,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route
           path="/"
@@ -102,7 +102,7 @@ export default function Navbar() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Sign" element={<Sign />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
