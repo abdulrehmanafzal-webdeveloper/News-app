@@ -20,7 +20,7 @@ export default function Items2() {
       let URL = `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=2eb8ccb5950e474296d19efb7e10403b&page=${page}`;
       let response = await fetch(URL);
       let data = await response.json();
-      setArticle((prevArticles) => [...prevArticles, ...data.articles]);
+      setArticle(data.articles || []);
       setResult(data.totalResults);
       setLoading(false);
     } catch (err) {

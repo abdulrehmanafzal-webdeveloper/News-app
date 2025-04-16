@@ -24,7 +24,7 @@ export default function Items4({ country = "us", category = "general" }) {
       const data = await response.json();
 
       if (response.ok) {
-        setArticles((prev) => (isInitialLoad ? data.articles : [...prev, ...data.articles]));
+        setArticles(data.articles || []);
         setTotalResults(data.totalResults);
       } else {
         throw new Error(data.message || "Error fetching articles");
