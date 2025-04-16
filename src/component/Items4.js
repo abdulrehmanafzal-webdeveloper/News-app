@@ -37,11 +37,6 @@ export default function Items4({ country = "us", category = "general" }) {
     }
   };
 
-
-  if (!article || !Array.isArray(article)) {
-    return <Placeholder />;
-  }
-  
   // Initial data fetch or reset on category change
   useEffect(() => {
     setArticles([]);

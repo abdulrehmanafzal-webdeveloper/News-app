@@ -24,11 +24,6 @@ export default function Items3() {
   };
 
 
-  if (!article || !Array.isArray(article)) {
-    return <Placeholder />;
-  }
-  
-
   // useEffect 1
   useEffect(() => {
     news();

@@ -43,11 +43,6 @@ export default function Items() {
     return () => clearInterval(interval);
   }, []);
 
-  if (!article || !Array.isArray(article)) {
-    return <Placeholder />;
-  }
-  
-
   // useEffect 2
   useEffect(() => {
     news();

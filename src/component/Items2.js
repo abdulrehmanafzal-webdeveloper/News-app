@@ -35,11 +35,6 @@ export default function Items2() {
     news();
   }, []);
 
-
-  if (!article || !Array.isArray(article)) {
-    return <Placeholder />;
-  }
-  
   // Fetch more data on scroll
   const fetchMoreData = async () => {
     if (loading) return;
