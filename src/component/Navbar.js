@@ -28,7 +28,7 @@ export default function Navbar() {
       setimage((prevIndex) => {
         return (prevIndex + 1) % images.length;
       });
-    }, 10000000);
+    }, 50000);
     // Clear interval on component unmount
     return () => clearInterval(interval);
   }, []);
