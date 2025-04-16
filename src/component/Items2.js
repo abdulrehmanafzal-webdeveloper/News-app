@@ -20,7 +20,7 @@ export default function Items2() {
       let URL = `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=2eb8ccb5950e474296d19efb7e10403b&page=${page}`;
       let response = await fetch(URL);
       let data = await response.json();
-      setArticle(data.articles || []);
+      setArticle((prevArticles) => [...prevArticles, ...data.articles]);
       setResult(data.totalResults);
       setLoading(false);
     } catch (err) {
@@ -35,6 +35,11 @@ export default function Items2() {
     news();
   }, []);
 
+
+  if (!article || !Array.isArray(article)) {
+    return <Placeholder />;
+  }
+  
   // Fetch more data on scroll
   const fetchMoreData = async () => {
     if (loading) return;

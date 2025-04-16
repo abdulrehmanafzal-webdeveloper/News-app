@@ -24,7 +24,7 @@ export default function Items4({ country = "us", category = "general" }) {
       const data = await response.json();
 
       if (response.ok) {
-        setArticles(data.articles || []);
+        setArticles((prev) => (isInitialLoad ? data.articles : [...prev, ...data.articles]));
         setTotalResults(data.totalResults);
       } else {
         throw new Error(data.message || "Error fetching articles");
@@ -37,6 +37,11 @@ export default function Items4({ country = "us", category = "general" }) {
     }
   };
 
+
+  if (!article || !Array.isArray(article)) {
+    return <Placeholder />;
+  }
+  
   // Initial data fetch or reset on category change
   useEffect(() => {
     setArticles([]);

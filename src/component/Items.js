@@ -19,7 +19,7 @@ export default function Items() {
       let response = await fetch(URL);
       let data = await response.json();
       // Store the articles array in the article state variable
-      setarticle(data.articles || []);
+      setarticle(data.articles);
       setResult(data.totalResults);
       setLoading(false);
     } catch (err) {
@@ -42,6 +42,11 @@ export default function Items() {
     news();
     return () => clearInterval(interval);
   }, []);
+
+  if (!article || !Array.isArray(article)) {
+    return <Placeholder />;
+  }
+  
 
   // useEffect 2
   useEffect(() => {

@@ -14,7 +14,7 @@ export default function Items3() {
       let response = await fetch(URL);
       let data = await response.json();
       // Store the articles array in the article state variable
-      setarticle(data.articles || []);
+      setarticle(data.articles);
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -23,6 +23,11 @@ export default function Items3() {
     }
   };
 
+
+  if (!article || !Array.isArray(article)) {
+    return <Placeholder />;
+  }
+  
 
   // useEffect 1
   useEffect(() => {
